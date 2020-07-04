@@ -1,0 +1,32 @@
+.perfect-expert{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 87.5rem;
+    &__title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--small{
+            font-size: 1.4rem;
+            color:rgb(119, 119, 119);
+            padding-bottom: 2rem;
+        }
+        &--lg{
+            font-family:"Rubik", sans-serif;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+    }
+
+}
+.social-cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .social-card{
+        margin-left: 2%;
+    }
+}

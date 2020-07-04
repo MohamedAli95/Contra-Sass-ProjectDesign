@@ -1,0 +1,40 @@
+.number-card {
+    position: relative;
+    @include flex-center-row;
+    width: fit-content;
+    color: white;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+    &__number {
+        font-size: 6rem;
+        font-weight: 700;
+        z-index: 2;
+    }
+
+    &__caption {
+        font-family: "Rubik", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        padding-left: 1rem;
+        line-height: 2rem;
+    }
+
+    &::before{
+        position: relative;
+        content: "";
+        width: 6rem;
+        height: 11rem;
+        left: 3rem;
+        top: 0rem;
+        box-sizing: border-box;
+        border: 2px solid #ff8a00;
+        background-color: transparent;
+        transition: all 0.4s;
+
+    }
+
+    &:hover::before{
+        background-color: $orange-main;
+    }
+}

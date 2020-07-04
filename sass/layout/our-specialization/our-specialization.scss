@@ -1,0 +1,38 @@
+.spectialization{
+    @include flex-center-column;
+    height: 81.3rem;
+    position: relative;
+    justify-content: start;
+
+    &__above{
+        @include flex-center-row;
+        justify-content: center;
+        background-image: url("../../../images/2.jpg");
+        color: white;
+        padding: 8.5rem 0 40rem;
+        width: 100%;
+        position: relative;
+
+        &::before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #000000;
+            content: "";
+            opacity: .85;
+        }
+    }
+    &__bottom{
+        position: absolute;
+        top: 35.3%;
+        &__cards{
+            position: relative;
+        @include flex-center-row;
+        .angle-card{
+            margin:0 2rem 0 2rem ;
+        }
+        }
+    }
+}

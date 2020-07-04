@@ -1,0 +1,95 @@
+.thumbnail-card {
+    position: relative;
+    width: 7.7rem;
+    height: 6.8rem;
+    padding: 0.5rem;
+    
+
+    &--hover {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 80%;
+            top: 12%;
+            left: 10%;
+            background-color: $orange-main;
+            opacity: 0.7;
+            transform: scale(0, 0);
+            transition: all 0.3s;
+        }
+
+        &__icontainer {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__link {
+            position: absolute;
+
+            a {
+                color: black;
+            }
+
+            z-index: 3;
+            top: 40%;
+            left: 40%;
+            transform: scale(0, 0);
+            transition: all 0.3s;
+        }
+
+        &:hover::before,
+        &:hover &__link {
+            transform: scale(1, 1);
+        }
+    }
+
+    &--detaild {
+        @include flex-center-row;
+        width: fit-content;
+        height: fit-content;
+        padding-bottom: 3rem ;
+
+        &__icontainer {
+            width: 7.7rem;
+            height: 6.8rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__content {
+            @include flex-center-column;
+            
+            .thumbnail-card--detaild__link{
+            font-family: "Rubik", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 2rem;
+            line-height: 2rem;
+            a{
+            color: white;
+            transition: all 0.3s;
+            }
+            }
+            .thumbnail-card--detaild__comments{
+                padding-top: 1rem;
+                padding-left: 2rem;
+                align-self: flex-start;
+            }
+        }
+        &:hover .thumbnail-card--detaild__link{
+            a{color: $orange-main;
+            }
+        }
+    }
+}

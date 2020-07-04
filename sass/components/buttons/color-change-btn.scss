@@ -1,0 +1,15 @@
+.color-change-btn{
+    display: inline-block;
+    a{
+        color: white;
+        text-transform: capitalize;
+    }
+    &--orange{
+        a{
+        transition: color 0.3s;
+        }
+        &:hover a{
+           color: $orange-main; 
+        }
+    }
+}

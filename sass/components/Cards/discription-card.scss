@@ -1,0 +1,93 @@
+.discription-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 37rem;
+    height: 45.52rem;
+
+    &::before{
+        position: absolute;
+        transform-origin: 100% 0;
+        content: "";
+        background-color: #ff8a00;
+        opacity: 0;
+        transform: scaleY(0);
+        top: 4%;
+        left: 4%;
+        width: 81%;
+        height: 70%;
+        transition: all 0.5s;
+    }
+
+    &__icontainer {
+        align-self: flex-start;
+    }
+
+    &__button {
+        position: absolute;
+        left: 40%;
+        top: 37%;
+        display: inline-block;
+        color: black;
+        font-size: 2.8rem;
+        transform: scale(0,0);
+    }
+
+    &__content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 33rem;
+        height: 15.52rem;
+        bottom: 0%;
+        box-shadow: 0rem 0rem 6px 0px rgba(0, 0, 0, 0.411);
+        background-color: white;
+        left: 9%;
+
+        &__text {
+            line-height: 3rem;
+            font-family: 'Rubik', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 2.5rem 4rem;
+            transition: all 0.5s;
+        }
+        &__desc{
+            position: relative;
+            left: -13%;
+            top: -9%;
+            display: flex;
+            color: gray;
+            font-size: 1.4rem;
+            z-index: 3;
+            transition: color 0.5s;
+        &__name {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        &__date {
+            padding: 1rem;
+            text-align: center;
+        }
+        }
+    }
+    &:hover::before{
+        opacity: 0.7;
+        transform: scaleY(1);
+    }
+    &:hover &__button{
+        transition: all 0.5s 0.3s;
+        transform: scale(1,1);
+    }
+    &:hover .discription-card__content__text {
+        color: #ff8a00;
+    }
+    &:hover .discription-card__content__desc {
+        color: black;
+    }
+}

@@ -1,0 +1,105 @@
+.about-us {
+    @include flex-center-row;
+    background-image: url("../../../images/1.jpg");
+    background-repeat: no-repeat;
+    height: 94.5rem;
+    margin: 0 auto;
+
+    &__left {
+
+        .about-us__wrapper{
+            position: relative;
+            @include flex-center-row;
+        }
+
+        .about-us__icontainer {
+            position: relative;
+            @include flex-center-row;
+
+            .about-us__beneath-icontainer {
+                position: relative;
+                top: -21rem;
+                right: -26%;
+
+                @include slide-left30;
+                animation-duration: 1.5s;
+
+            }
+
+            .about-us__above-icontainer {
+                position: relative;
+                z-index: 1;
+                @include slide-left30;
+                animation-delay: 0.5s;
+                animation-duration: 1.5s;
+
+            }
+
+        }
+
+        .about-us__title {
+            position: absolute;
+            right: 36%;
+            bottom: 15%;
+            font-family: "Rubik", sans-serif;
+            font-size: 60px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #f2f2f2;
+            text-shadow: black 0px 0px 10px;
+            z-index: 34;
+            @include slide-right30;
+            animation-duration: 1s;
+            animation-delay: 1.5s;
+
+        }
+    }
+
+
+    &__desc {
+        @include flex-center-column;
+        align-items: flex-start;
+        background-color: white;
+        border: rgb(242, 242, 242) 2rem solid;
+        border-left: 0;
+        width: 50%;
+        height: 50%;
+        max-width: 40%;
+        @include slide-right30;
+        animation-duration: 1s;
+
+        div {
+            padding: 0% 0% 5% 10%;
+        }
+
+        &__title {
+            position: relative;
+            font-family: "Rubik", sans-serif;
+            font-size: 3rem;
+            font-weight: 500;
+         
+            &::before{
+                position: absolute;
+                left: 23.5%;
+                bottom: 0;
+                height: 0.17rem;
+                width: 4.5rem;
+                background-color: #ff8a00;
+                content: "";
+            }
+        }
+
+        &__text {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color:rgb(119, 119, 119);
+            line-height: 2.8rem;
+            max-width: 50%;
+        }
+
+        &__button{
+            width: fit-content;
+            padding: 10% 10% 10% 10% !important;
+        }
+    }
+}

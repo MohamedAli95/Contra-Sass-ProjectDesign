@@ -1,0 +1,24 @@
+.layered-title{
+    position: relative;
+    width: fit-content;
+    &__beneath{
+        font-size: 7.2rem;
+        font-weight: bold;
+        opacity: 0.1;
+        text-transform: uppercase;
+    }
+    &__above--center{
+        position: absolute;
+        font-size: 3rem;
+        font-weight: bold;
+        top: 30%;
+        left: 29%;
+    }
+    &__above--end{
+        position: absolute;
+        font-size: 3rem;
+        font-weight: bold;
+        top: 30%;
+        right:0;
+    }
+}

@@ -1,0 +1,14 @@
+.numbers{
+    @include flex-center-row;
+    height: 27%;
+    max-width: 140rem;
+    margin: 123px auto;
+    background-attachment: fixed;
+    background-image: url(../../../images/3.jpg);
+    &__container{
+        width: 100%;
+        @include flex-center-row;
+        justify-content: space-around;
+        flex-wrap: wrap;;
+    }
+}

@@ -1,0 +1,53 @@
+.test{
+    margin-top: 50rem;
+}
+
+.angle-card{
+    text-align: center;
+    box-sizing: border-box;
+    width: 37rem;
+    box-shadow: 0rem 0rem 0rem 0rem #777777;
+    transition: transform,box-shadow  0.2s;
+    box-sizing: border-box;
+    &__image{
+        transition: transform 0.2s ease-in-out;
+        transform:rotate(0deg) scale(1);
+    }
+    &:hover &__image{
+        transform:rotate(-5deg) scale(1.2);
+    }
+    &__image-container{
+        overflow: hidden;
+    }
+    &__btn{
+        display: inline-block;
+        padding: 3rem;
+        color: black;
+        transition: color 0.2s;
+        &:hover{
+            color: $orange-main;
+        }
+    }
+    &__content{
+
+        &__title{
+            font-weight: 500;
+            font-size: 1.7rem;;
+            font-family: 'Rubik', sans-serif;
+            transition: color 0.2s;
+            display: inline-block;
+            padding: 3rem;
+            &:hover{
+                color:$orange-main;
+            }
+        }
+        &__text{
+            line-height: 3rem;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0rem 0.0rem 0.2rem 0.0rem #777777;
+    }
+    
+}

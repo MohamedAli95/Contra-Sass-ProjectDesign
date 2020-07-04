@@ -1,0 +1,140 @@
+.footer {
+    color: white;
+    background-color: black;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__top {
+        @include flex-center-row;
+    }
+
+    &__box {
+        @include flex-center-column;
+        padding: 5rem;
+
+        &--about {
+
+            &__icontainer {
+                padding-bottom: 5%;
+                align-self: flex-start;
+            }
+
+            &__text {
+                width: 30rem;
+                line-height: 3.5rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+
+        }
+
+        &--recent-posts {
+            &__title {
+
+                padding: 24% 0 17% 0;
+                font-family: "Rubik", sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                align-self: flex-start;
+
+                i {
+                    color: $orange-main;
+                    font-size: 1.5rem;
+                    padding-right: 1rem;
+                }
+            }
+        }
+
+        &--useful-links {
+            &__title {
+
+                padding: 42% 0 2% 0;
+                font-family: "Rubik", sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                align-self: flex-start;
+
+                i {
+                    color: $orange-main;
+                    font-size: 1.5rem;
+                    padding-right: 1rem;
+                }
+            }
+
+            &__btns {
+                @include flex-center-column;
+                padding: 35% 0 7% 0;
+                align-self: flex-start;
+
+                div {
+                    padding: 1rem;
+                }
+            }
+        }
+
+        &--recent-works {
+            &__title {
+
+                padding: 7% 0 17% 0;
+                font-family: "Rubik", sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                align-self: flex-start;
+
+                i {
+                    color: $orange-main;
+                    font-size: 1.5rem;
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        @include flex-center-row;
+        border-top:0.05rem solid #ffffff57 ;
+        &__text {
+            position: relative;
+            background-color: #ff8a00;
+            height: 7rem;
+            height: 7rem;
+            line-height: 7rem;
+            text-align: center;
+            width: 40%;
+
+            p {
+
+                padding-left: 30%;
+                color: black;
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+
+            &::after {
+                position: absolute;
+                left: 100%;
+                top: 0;
+                border-right: 40px solid transparent;
+                border-bottom: 70px solid #ff8a00;
+                content: "";
+            }
+        }
+
+        &__links-container {
+            @include flex-center-row;
+            justify-content: flex-end;
+            width: 60%;
+            height: 7rem;
+
+            .footer__bottom__links {
+                    padding-right: 14%;
+
+                a{
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}

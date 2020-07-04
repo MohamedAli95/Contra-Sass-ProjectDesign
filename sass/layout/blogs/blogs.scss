@@ -1,0 +1,46 @@
+.blogs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 77.2rem;
+
+    &__title {
+        padding: 0 0 5rem 13%;
+
+        align-self: flex-start;
+    }
+}
+
+
+.discription-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        position: absolute;
+        right: 0;
+        top: 6rem;
+        height: 34.7rem;
+        width: 15.7rem;
+        background-image: url(../../../images/icon-dots.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+    }
+
+    &::after{
+        position: absolute;
+    left: 0;
+    top:0;
+    height: 57.6rem;
+    width: 23.8rem;
+    background-image: url(../../../images/pentagon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    z-index: -1;
+    }
+}

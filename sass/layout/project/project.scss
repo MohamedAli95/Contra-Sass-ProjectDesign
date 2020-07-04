@@ -1,0 +1,14 @@
+.project{
+    @include flex-center-column;
+    
+    &__header{
+        width: 80%;
+        @include flex-center-row;
+        justify-content: space-between;
+        padding-bottom: 5% ;
+    }
+
+    &__fading-cards-container{
+        @include flex-center-row;
+    }
+}

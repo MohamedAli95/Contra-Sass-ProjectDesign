@@ -1,0 +1,108 @@
+.fading-out-card{
+    position: relative;
+    width: 25%;
+    height: 40rem;
+    box-sizing: border-box;
+    // border: black 2rem solid;
+    color: white;
+
+    &__image-container{
+    height: 100%;
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+
+    &::before
+    {
+        content: "";
+        position: absolute;
+        background: black;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s;
+        transform: scale(0,0);
+        border-radius: 10rem ;
+    }
+    &:hover::before
+    {
+        border-radius: 0rem ;
+        opacity: 0.88;
+        transform: scale(1,1);
+    }
+    
+
+    &__contents{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &__header{
+            transform: scale(0,0);
+            // display: inline-block;
+            font-size: 1.8rem;
+            text-transform:uppercase ;
+            position: relative;
+            top: -36%;
+            left: -12%;
+            align-self: flex-end;
+            transition: transform  0.1s ;
+            & a:hover{
+                transition: color 0.5s ease-in-out;
+                color: $orange-main;
+            }
+            & a{
+                transition: color 0.3s ease-in-out;
+            }
+        }
+        &__buttons{
+            font-size: 2.5rem;
+            transform: scale(0,0);
+            transition: all  0.1s ;
+            color: white;
+            & a:hover{
+                color: $orange-main;
+            }
+            & a{
+                transition: color 0.3s ease-in-out;
+            }
+        }
+        &__footer{
+            position: relative;
+            font-size: 1.4rem;
+            top: 35%;
+            left:7%;    
+            align-self: flex-start;
+            text-transform:uppercase ;
+            transform: scale(0,0);
+            transition: transform  0.1s ;
+
+        }
+        
+    }
+
+    &:hover >.fading-out-card__contents>.fading-out-card__contents__header{
+        transform: scale(1,1);
+        transition: transform  0.4s 0.8s ;
+    }
+    &:hover >.fading-out-card__contents>.fading-out-card__contents__buttons{
+        transition: transform  0.4s 0.5s ;
+        transform: scale(1,1);
+        
+    }
+    &:hover >.fading-out-card__contents>.fading-out-card__contents__footer{
+        transition: transform  0.4s 1.1s ;
+        transform: scale(1,1);
+        
+    }
+    & a{
+        color: white;
+    }
+   
+}

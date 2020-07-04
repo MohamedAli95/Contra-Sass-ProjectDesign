@@ -1,0 +1,11 @@
+.thumnails-container--hover{
+    @include flex-center-row;
+    flex-wrap: wrap;
+    width: 27rem;
+}
+
+.thumnails-container--detaild{
+    @include flex-center-column;
+    width: fit-content;
+    height: fit-content;
+}

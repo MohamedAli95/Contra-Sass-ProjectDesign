@@ -1,0 +1,27 @@
+.nave-link
+{
+position: relative;
+color: #ffffff;
+font-size: 1.5rem;
+// font-weight: bold;
+letter-spacing: 0.1rem;
+padding: 0rem 0 5rem 1.5rem;
+&::after{
+    position: absolute;
+    content: "";
+    height: 0;
+    top: -3.75rem;
+    left: 50%;
+    border: #ff8a00 solid 0.2rem;
+    border-right: transparent;
+    transition: all 0.5s ;
+    visibility: hidden;
+}
+&:hover::after{
+    visibility: visible;
+    // transition: height 0.2s;
+    border: #ff8a00 solid 0.2rem;
+    border-right: transparent;
+    height: 2.5rem;
+}
+}
